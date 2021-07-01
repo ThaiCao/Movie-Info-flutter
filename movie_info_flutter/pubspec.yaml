@@ -20,6 +20,9 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
+module:
+  androidX: true # Add this line.
+
 dependencies:
   flutter:
     sdk: flutter
@@ -30,9 +33,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^0.19.1 # to use SVG icon
   animations: ^1.1.0 # to use animation
-  rxdart: ^0.23.1 # use rx
-  http: ^0.12.0+4 # use http
+  rxdart: ^0.27.1 # use rx
+  http: ^0.13.0 # use http
+  multiple_stream_builder: ^1.0.0 #multiple stream
+  carousel_slider: ^4.0.0
 #  gradient_app_bar: ^0.1.3 # appbar gradient
+  palette_generator: ^0.2.3
+  cached_network_image: ^3.0.0
+  google_fonts: ^2.1.0
 
 dev_dependencies:
   flutter_test:

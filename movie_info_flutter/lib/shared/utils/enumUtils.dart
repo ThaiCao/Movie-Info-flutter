@@ -1,7 +1,8 @@
 enum MovieType{
   popular,
   upcoming,
-  topRated
+  topRated,
+  // latest
 }
 
 extension MovieTypeEx on MovieType{
@@ -13,6 +14,13 @@ extension MovieTypeEx on MovieType{
         return "top_rated";
       case MovieType.upcoming:
         return "upcoming";
+      // case MovieType.latest:
+      //   return "latest";
     }
   }
+}
+
+enum MovieGridType{
+  cover,
+  coming,
 }

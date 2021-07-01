@@ -8,12 +8,12 @@ class  ApiProvider{
   final apiKey = "e54d1df6bcc26b67ccadf98cea21c3f3";
   final baseURL = "http://api.themoviedb.org/3";
   final imageURLW185 = "https://image.tmdb.org/t/p/w185";
-  final imageURLW500 = "https://image.tmdb.org/t/p/w500";
+   static final imageURLW500 = "https://image.tmdb.org/t/p/w500";
 
   Future<MovieResponse> fetchMovies(String type) async{
     Response response;
     if(apiKey !=''){
-      response = await client.get('$baseURL/movie/${type}?api_key=$apiKey');
+      response = await client.get(Uri.parse('$baseURL/movie/${type}?api_key=$apiKey'));
     }else{
       throw Exception('Please add your API key');
     }

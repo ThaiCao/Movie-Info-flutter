@@ -14,11 +14,17 @@ class MovieResponse{
 });
 
   factory MovieResponse.fromJson(Map<String, dynamic> movieResponse){
+    List<Movie> temp =[];
+    for(int i=0; i< movieResponse['results'].length; i++){
+      Movie result = Movie.dataFromResponse(movieResponse['results'][i]);
+      temp.add(result);
+    }
     return MovieResponse(
       page: movieResponse['page'],
       totalPages: movieResponse['total_pages'],
       totalResults: movieResponse['total_results'],
-      movies: movieResponse['results']
+      movies: temp,
+      // movies: movieResponse['results']
     );
   }
 }

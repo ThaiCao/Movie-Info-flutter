@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:movie_info_flutter/shared/utils/constrants.dart';
@@ -133,7 +134,7 @@ class MainAppWidgetFulWidgetState extends State<MainAppWidget>{
 
           ],
         ),
-          bottomNavigationBar: BottomNavigationBar(
+          bottomNavigationBar: CupertinoTabBar(
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: SvgPicture.asset("assets/icons/home.svg"),
@@ -157,7 +158,8 @@ class MainAppWidgetFulWidgetState extends State<MainAppWidget>{
               ),
             ],
             currentIndex: selectedIndex,
-            selectedItemColor: Colors.white70,
+            activeColor: Colors.white70,
+            border: Border(top: BorderSide.none),
             onTap: onItemSelected,
           ),
     );

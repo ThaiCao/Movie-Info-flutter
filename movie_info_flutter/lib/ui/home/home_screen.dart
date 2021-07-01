@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:movie_info_flutter/shared/utils/constrants.dart';
 import 'dart:ui' as ui;
 
+import 'package:movie_info_flutter/ui/home/coponents/home_body.dart';
+import 'package:movie_info_flutter/ui/home/coponents/home_style2.dart';
+
 class HomeScreen extends StatefulWidget{
 
   HomeScreen({Key? key}) : super(key: key);
@@ -26,7 +29,8 @@ class HomeScreenFulWidgetState extends State<HomeScreen>{
           color: Colors.white30.withOpacity(0.61),
           borderRadius: BorderRadius.all(Radius.circular(margin8)),
         ),
-        child: Text( "Home page"),
+        // child: HomeBody(title: "Home page",),
+        child: HomeStyle2(),
       ),
       // child: widgetOptions.elementAt(selectedIndex),
     );
