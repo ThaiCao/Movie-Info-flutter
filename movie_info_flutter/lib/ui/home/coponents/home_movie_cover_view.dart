@@ -17,21 +17,26 @@ class HomeMovieCoverView extends StatelessWidget{
     return GestureDetector(
         onTap: (){},
         child: Container(
+          // padding: EdgeInsets.fromLTRB(margin10, 0, margin10, 0),
+          color: Colors.yellowAccent.withOpacity(0.61),
           width: width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               MovieCoverImage(ApiProvider.imageURLW500 + movie.posterPath!, width, (width / 0.75)),
               SizedBox(height: margin5,),
-              Text(
-                movie.title!,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: Colors.lightBlue,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
+              Container(
+                padding: EdgeInsets.fromLTRB(margin5, 0, margin5, 0),
+                child: Text(
+                  movie.title!,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: Colors.lightBlue,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
                 ),
-                maxLines: 1,
               ),
               SizedBox(height: margin2,),
               Row(

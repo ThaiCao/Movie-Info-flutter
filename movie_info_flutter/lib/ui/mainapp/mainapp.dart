@@ -109,7 +109,8 @@ class MainAppWidgetFulWidgetState extends State<MainAppWidget>{
                 margin: EdgeInsets.all(margin10),
                 decoration: BoxDecoration(
                   // color: const Color(0xFFB4C56C).withOpacity(0.01),
-                  color: const Color(0xFF395001).withOpacity(0.41),
+                  // color: const Color(0xFF395001).withOpacity(0.41),
+                  color: Colors.white10.withOpacity(0.41),
                   borderRadius: BorderRadius.all(Radius.circular(margin8)),
                 ),
                 child: widgetOptions.elementAt(selectedIndex),

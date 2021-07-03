@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_info_flutter/models/response/movie_response.dart';
 import 'package:movie_info_flutter/shared/utils/constrants.dart';
@@ -29,19 +30,22 @@ class MovieThreeGridView extends StatelessWidget{
          break;
      }
      return Container(
+       margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
        child: Column(
          crossAxisAlignment: CrossAxisAlignment.start,
          children: <Widget>[
             HomeSectionView(title, action),
            Container(
-             color: Colors.white70,
+             // color: Colors.white70,
+             // color: Colors.white30.withOpacity(0.61),
              padding: EdgeInsets.fromLTRB(0, margin5, 0, 0),
              child: Wrap(spacing: 10, runSpacing: 10 , children: children ?? [],),
 
            ),
            Container(
              height: margin2,
-             color: Color(0xFFC60909),
+             // color: Color(0xFFC60909),
+             color: Colors.purpleAccent,
            )
          ],
        ),

@@ -12,7 +12,13 @@ class HomeSectionView extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white70,
+      // color: Colors.white70,
+      // color: Colors.white30.withOpacity(0.61),
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.purple, Colors.purpleAccent],
+              begin: Alignment.bottomRight,
+              end: Alignment.centerLeft)),
       padding: EdgeInsets.fromLTRB(margin10, margin10, margin10, margin5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,13 +28,13 @@ class HomeSectionView extends StatelessWidget{
             children: <Widget>[
               Text(
                 '$title',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.lightBlue),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.yellowAccent),
               ),
               SizedBox(height: margin5,),
               Container(
                 width: 80,
                 height: margin2,
-                color: Colors.red,
+                color: Colors.yellowAccent,
               )
             ],
           ),
@@ -37,9 +43,9 @@ class HomeSectionView extends StatelessWidget{
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Text('All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.lightBlue),),
+                Text('All', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.yellowAccent), ),
                 SizedBox(height: 3,),
-                Icon(CupertinoIcons.forward, size: 14, color: Colors.lightBlue,),
+                Icon(CupertinoIcons.forward, size: 14, color: Colors.yellowAccent,),
               ],
             ),
           )

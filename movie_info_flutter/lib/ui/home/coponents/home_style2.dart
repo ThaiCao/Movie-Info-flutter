@@ -42,6 +42,7 @@ class HomeStyle2FulWidget extends State<HomeStyle2>{
               children: <Widget>[
                 new LatestWidget(snapshots.item1.data),
                 new MovieThreeGridView(snapshots.item3.data, 'coming soon', 'coming_soon', MovieGridType.coming),
+                new MovieThreeGridView(snapshots.item2.data, 'Top Rated', 'top_rated', MovieGridType.cover),
               ],
             );
         }else{
