@@ -8,6 +8,8 @@ import 'package:movie_info_flutter/ui/more/more_screen.dart';
 import 'package:movie_info_flutter/ui/recent/recent_screen.dart';
 import 'dart:ui' as ui;
 
+import 'package:movie_info_flutter/ui/view/sidemenu/side_menu.dart';
+
 class MainAppWidget extends StatefulWidget{
 
   MainAppWidget({Key? key}) : super(key: key);
@@ -77,6 +79,7 @@ class MainAppWidgetFulWidgetState extends State<MainAppWidget>{
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: buildAppbar(),
+        drawer: SideMenu(),
         body: Stack(
           children: <Widget>[
             Container(
